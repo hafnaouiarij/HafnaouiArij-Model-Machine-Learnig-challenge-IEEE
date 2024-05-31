@@ -84,7 +84,7 @@ data2 = pd.get_dummies(data2)
 test_predictions = best_model.predict(data2)
 
 # Create a DataFrame with 'ID' and 'Watermelon Disease Presence' columns
-results_df = pd.DataFrame({data2['ID'], 'Watermelon Disease Presence'})
+results_df = pd.DataFrame({'Watermelon Disease Presence': test_predictions})
 # Map 1 to 'Yes' and 0 to 'No'
 results_df['Watermelon Disease Presence'] = results_df['Watermelon Disease Presence'].map({1: 'Yes', 0: 'No'})
 
